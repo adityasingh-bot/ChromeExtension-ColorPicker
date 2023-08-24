@@ -1,3 +1,0 @@
-qwertyhgv
-wertyhgv
-ertyuhgv
