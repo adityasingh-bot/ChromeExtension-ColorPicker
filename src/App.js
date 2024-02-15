@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [picker, setPicker] = useState();
+  const setColor = (code) =>{
+    const colorCode = code;
+    if(colorCode.includes(code)){
+      setPicker(code);
+    }
+  }     
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+        <h1> Color Picker </h1>
+        <h3>Choosen Color : {picker}</h3>
+        <input type='color' value={picker} onChange={(e)=> setColor(e.target.value)}/>      
     </div>
   );
 }
